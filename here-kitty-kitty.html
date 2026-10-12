@@ -26,7 +26,7 @@ hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 11 October 2026</p>
+<p class="updated">Last updated: 12 October 2026</p>
 
 <p>
   This Privacy Policy describes how <strong>Here Kitty Kitty</strong>
@@ -39,33 +39,38 @@ hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
 <h2>1. Information We Collect</h2>
 <p>We do not ask you for your name, email address, or any other personal detail, and
   the App has no account to sign up for. Most of what the App remembers is kept on
-  your own device. The exceptions are the optional daily leaderboard, the anonymous
+  your own device. The exceptions are the optional Ranks boards, the anonymous
   usage measurement, and the advertising described below.</p>
 
 <h3>Stored on your device only</h3>
 <p>The App saves your play record in the browser storage of the app on your device:
-  which cats you have found and how often, your times for each night's house, hints
-  used, your daily stamps and streak, your sound setting, and the display name you picked for the
-  leaderboard. This data never leaves your device unless you submit a score, and it
-  is removed when you uninstall the App.</p>
+  which cats you have found and how often, the number of cats and bonus things you have
+  found on the daily searches, your times for each night's house, hints used,
+  your daily stamps and streak, your sound setting, and the display name
+  you picked for the boards. This data never leaves your device unless you choose a display
+  name, and it is removed when you uninstall the App.</p>
 
-<h3>The daily leaderboard (optional)</h3>
-<p>Everybody plays the same generated house each day, and the App can rank your time
-  against other players. <strong>Nothing is submitted unless you choose a display
-  name.</strong> If you do, the following is sent to our Google Firebase project and
-  is visible to other players in the in-game Ranks list for that day's house:</p>
+<h3>The Ranks boards (optional)</h3>
+<p>Everybody plays the same generated house each day. The Ranks screen can show two
+  boards: one for cats and bonus things found, and one for the quickest times on the day's
+  house. <strong>Nothing is submitted unless you choose a display name.</strong> If you
+  do, the following is sent to our Google Firebase project and is visible to other players
+  in the in-game Ranks screen:</p>
 <ul>
   <li>the display name you typed (up to 16 characters &mdash; choose a nickname, not
       your real name, if you would rather not be identified)</li>
-  <li>your completion time in seconds and the number of hints you used</li>
-  <li>the time you finished</li>
+  <li>the number of cats and the number of bonus things you have found on the daily
+      searches, and the number of the first day they were counted from</li>
+  <li>your completion time in seconds and the number of hints you used for each
+      day's house, shown on that day's speed board</li>
+  <li>the time the entry was last updated</li>
   <li>an anonymous account identifier (see below)</li>
 </ul>
-<p>Leaving the name blank means you never appear on the board and nothing is sent.</p>
+<p>Leaving the name blank means you never appear on either board and nothing is sent.</p>
 
 <h3>Anonymous sign-in</h3>
 <p>To make sure one player cannot overwrite another player's row, the App creates an
-  anonymous Firebase account the first time it contacts the leaderboard. It is not a
+  anonymous Firebase account the first time it contacts the boards. It is not a
   login: there is no email address, no password, and nothing that identifies you. It
   is a random identifier stored on your device, and a fresh one is created if you
   reinstall the App.</p>
@@ -88,9 +93,9 @@ hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
   <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
 </ul>
 
-<h3>Leaderboard hosting &ndash; Google Firebase</h3>
-<p>The leaderboard uses Firebase Authentication (anonymous sign-in) and Cloud
-  Firestore to store and serve the scores described above. Google processes this data
+<h3>Board hosting &ndash; Google Firebase</h3>
+<p>The boards use Firebase Authentication (anonymous sign-in) and Cloud
+  Firestore to store and serve the entries described above. Google processes this data
   on our behalf as our hosting provider, and may log technical information such as
   your IP address as part of serving those requests.</p>
 <ul>
@@ -137,20 +142,20 @@ hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
 <h2>4. Children's Privacy</h2>
 <p>The App is intended for players aged 13 and over and is not directed at children. We do not knowingly collect personal
   information from children under the age of 13. If you believe a child has provided
-  personal information &mdash; including a display name on the leaderboard &mdash;
+  personal information &mdash; including a display name on a board &mdash;
   please contact us and we will delete it.</p>
 
 <h2>5. Data Retention and Deletion</h2>
-<p>Data held on your device is deleted when you uninstall the App. Leaderboard entries
-  stay on that day's board so the ranking remains accurate, and cannot be deleted from
-  inside the App. If you want an entry removed, email us with the display name and the
-  date you played and we will delete it. Data collected by the third-party services
+<p>Data held on your device is deleted when you uninstall the App. A board entry stays
+  on its board so the ranking remains accurate (a time on that day's speed board, and your
+  totals on the cats and bonus things board), and cannot be deleted from inside the App.
+  If you want an entry removed, email us with the display name and we will delete it. Data collected by the third-party services
   above is retained according to their own policies, linked above.</p>
 
 <h2>6. Your Rights</h2>
 <p>Depending on where you live you may have rights over your personal data, including
   access, correction, and deletion. For anything we hold &mdash; in practice, a
-  leaderboard entry &mdash; contact us using the details below and we will act on it.
+  board entry &mdash; contact us using the details below and we will act on it.
   For data held by advertising services, please use their privacy links above.</p>
 
 <h2>7. Changes to This Policy</h2>
