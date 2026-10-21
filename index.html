@@ -15,35 +15,83 @@
     }
     h1 { font-size: 1.8em; color: #1a1a2e; }
     h2 { font-size: 1.2em; color: #1a1a2e; margin-top: 2em; }
+    h3 { font-size: 1.05em; color: #1a1a2e; margin-top: 1.4em; }
     a  { color: #4a90d9; }
     p, li { font-size: 0.97em; }
     ul { padding-left: 1.4em; }
     hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
     .updated { color: #888; font-size: 0.9em; }
+    .summary { background: #f5f7fb; border-radius: 8px; padding: 4px 18px; }
   </style>
 </head>
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: April 2026</p>
+<p class="updated">Last updated: 21 October 2026</p>
 <p>
   This Privacy Policy describes how <strong>Sleep like a Baby: White Noise</strong>
   ("the App", "we", "us") collects, uses, and shares information when you use our
   mobile application on iOS and Android.
 </p>
 
+<div class="summary">
+  <p><strong>In short.</strong> There is no account and no sign-up. Sleep and health data that the App reads
+  on your phone (from Apple Health, Health Connect and your phone's motion sensors) stays on your phone: we
+  do not send it to our servers, to analytics, to advertisers or to anyone else, and we never sell it. A
+  few simple, anonymous usage details go to Google Firebase, and the free version shows ads.
+  Details are below.</p>
+</div>
+
 <hr/>
 
-<h2>1. Information We Collect</h2>
-<p>We do not directly collect or store personal information. However, the third-party
-services integrated into the App may collect certain data as described below.</p>
+<h2>1. Information the App uses</h2>
+
+<h3>Health and sleep data (read on your device only)</h3>
+<p>If you choose to turn on sleep tracking, the App can read the following, always with your permission,
+which you can withdraw at any time in your phone's settings:</p>
+<ul>
+  <li><strong>Apple Health (iOS):</strong> your sleep analysis from a wearable, read-only. The App does not write to Apple Health.</li>
+  <li><strong>Health Connect (Android):</strong> your sleep sessions (the "read sleep" permission), read-only. The App does not write to Health Connect.</li>
+  <li><strong>Motion and activity (iOS Motion &amp; Fitness; Android activity recognition and Google's Sleep API):</strong> your phone's motion and step history, to estimate when you fell asleep and woke, so you can track your sleep without a wearable.</li>
+  <li><strong>Screen on/off history (Android, usage access):</strong> used the same way, to estimate when you went to bed and woke up.</li>
+</ul>
+<p>We use this data only to show your weekly sleep pattern and your last night inside the App. It is stored on
+your device. It is <strong>not</strong> sent to us, to Google Firebase or any other analytics service, to
+ad networks, or to any other third party; it is not used for advertising; and it is not sold. Removing
+the App removes the App's copy. Your data in Apple Health and Health Connect is not changed.</p>
+
+<h3>Your answers to the setup questions</h3>
+<p>When you first open the App it asks a few optional questions (for example what makes sleep hard, which
+noise keeps you up, when bedtime usually starts, and which sounds you use now). You can skip them. Your
+answers are kept on your device and are used to choose sounds and your sleep coach's nightly steps.
+Because the answers describe sleep difficulties, we treat them as health information. A short coded
+version of your answers (for example "noise" and "snoring") is sent to Google Firebase Analytics as
+anonymous user properties, tied to a random app-install identifier and not to your name, email or
+any account, so we can see which choices are common and whether the App helps. We do not use these
+answers to target advertising and we do not give them to ad networks.</p>
+
+<h3>Your sleep coach</h3>
+<p>The coach is a set of fixed, pre-written nightly steps that live inside the App. Choosing the steps and
+writing your reminder happen on your device. We log simple events (for example that you opened the
+coach, which night of the plan it was, and whether you answered "helped" or "not really") to Google
+Firebase Analytics, with no sleep times or measurements. You can turn the coach off in Settings.</p>
+
+<h3>Bedtime stories</h3>
+<p>If you ask for a bedtime story, the topic and the optional name you type are sent to our story service
+(running on Google Cloud), which passes them to OpenAI to write the story. A random per-install code, not
+your device identifier, is sent with each request only so we can limit how often one install can ask.
+Please do not type personal details. Requests can remain in our server logs and with OpenAI for a limited
+period for debugging, abuse prevention and as OpenAI's terms allow. We do not link them to your identity.
+The story is read aloud with your phone's built-in text-to-speech voice or an on-device voice; the App
+does not record audio.</p>
 
 <h2>2. Third-Party Services</h2>
 
-<h3>Analytics – Google Firebase</h3>
-<p>We use Firebase Analytics to understand how users interact with the App (e.g. which
-sounds are played, session length). Firebase may collect device identifiers, usage
-data, and crash reports. No personally identifiable information is collected.</p>
+<h3>Analytics and crash reports – Google Firebase</h3>
+<p>We use Firebase Analytics and Crashlytics to understand how the App is used and to fix crashes. They
+may collect device and app information (device model, operating system, app version, crash logs), a
+random app-instance identifier, advertising identifier where you allow it, and usage events (for example
+which sounds are played and how long a session lasts). No name, email or sleep measurement is collected.</p>
 <ul>
   <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
 </ul>
@@ -56,9 +104,11 @@ platform, which includes the following ad networks:</p>
   <li><strong>Google AdMob</strong></li>
 </ul>
 <p>These networks may collect device advertising identifiers (IDFA on iOS, GAID on
-Android), IP address, and other non-personal technical information to serve
-relevant advertisements. On iOS, we request your permission via Apple's App
-Tracking Transparency (ATT) framework before accessing your IDFA.</p>
+Android), IP address, and other technical information to serve and measure advertisements. In the
+European Economic Area, the United Kingdom and similar regions we ask for your consent with Google's
+consent form before personalised ads. On iOS, we request your permission via Apple's App Tracking
+Transparency (ATT) framework before accessing your IDFA. We do not give ad networks your health data,
+sleep data or your answers to the setup questions.</p>
 <ul>
   <li><a href="https://ironsource.mobi/platform/site/privacypolicy.html" target="_blank">IronSource / LevelPlay Privacy Policy</a></li>
   <li><a href="https://unity.com/legal/privacy-policy" target="_blank">Unity Ads Privacy Policy</a></li>
@@ -66,18 +116,23 @@ Tracking Transparency (ATT) framework before accessing your IDFA.</p>
 </ul>
 
 <h3>In-App Purchases</h3>
-<p>The App offers optional in-app purchases (e.g. a "No Ads" subscription) processed
+<p>The App offers optional in-app purchases (for example a Premium subscription) processed
 entirely by Apple (App Store) or Google (Play Store). We do not receive or store
-your payment information. Purchases are governed by the respective platform's
-terms and privacy policy.</p>
+your payment information; we only learn whether Premium is active. Purchases are governed by the
+respective platform's terms and privacy policy.</p>
 <ul>
   <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
   <li><a href="https://policies.google.com/privacy" target="_blank">Google Play Privacy Policy</a></li>
 </ul>
 
-<h3>Push Notifications</h3>
-<p>The App may request permission to send local notifications (e.g. reminders). These
-are processed entirely on your device and do not transmit personal data to us.</p>
+<h3>Notifications</h3>
+<p>The App may ask permission to send local notifications (for example a bedtime reminder, which can
+include your coach's step for the night). They are created and delivered on your device and do not
+transmit personal data to us.</p>
+
+<h3>Settings and catalogue files</h3>
+<p>The App downloads small public files (feature settings and a list of our other apps) from GitHub
+Pages. Like any web request this reveals your IP address to the host; no personal data is sent in it.</p>
 
 <hr/>
 
@@ -87,27 +142,38 @@ advertising identifier (IDFA) for personalised advertising. You may deny this
 request and the App will continue to function normally; ads will simply be
 less personalised.</p>
 
-<h2>4. Children's Privacy</h2>
-<p>The App is intended for general audiences. We do not knowingly collect personal
+<h2>4. Health information and medical advice</h2>
+<p>The App is for relaxation and general wellbeing. It is not a medical device and does not diagnose,
+treat or prevent any condition. If you have ongoing trouble sleeping, new or sudden ringing in your ears,
+snoring with pauses in breathing, or worries about your baby's sleep, please talk to a doctor.</p>
+
+<h2>5. Children's Privacy</h2>
+<p>The App is intended for general audiences, including parents looking for sounds for a baby's sleep. It is
+not directed at children, and we do not knowingly collect personal
 information from children under the age of 13. If you believe a child has provided
 personal information, please contact us and we will take steps to delete it.</p>
 
-<h2>5. Data Retention</h2>
-<p>We do not directly store personal data. Data collected by third-party services is
-retained according to their own retention policies, linked above.</p>
+<h2>6. Data Retention and Deletion</h2>
+<p>Data on your device (sleep history, setup answers, coach progress, saved mixes) stays there until you
+remove the App or clear its data. We do not run user accounts. Data held by third-party services
+(Firebase, ad networks, OpenAI) is retained according to their own policies, linked above. Because we
+do not know who you are, we cannot find your data by name; if you would like anything removed, contact
+us and we will help where we can.</p>
 
-<h2>6. Your Rights</h2>
+<h2>7. Your Rights and Choices</h2>
 <p>Depending on your location you may have rights regarding your personal data,
-including access, correction, and deletion. Please contact the relevant third-party
-service directly, or contact us using the details below and we will assist where
-possible.</p>
+including access, correction, and deletion. You can also: withdraw Health, Motion or notification
+permissions in your phone's settings; skip or retake the setup questions; turn the coach off in
+Settings; reset or limit your advertising identifier in your phone's privacy settings; and change your ad
+consent choice in the App. Please contact the relevant third-party service directly, or contact us using
+the details below and we will assist where possible.</p>
 
-<h2>7. Changes to This Policy</h2>
+<h2>8. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. Changes will be posted on
 this page with an updated date. Continued use of the App after changes constitutes
 acceptance of the revised policy.</p>
 
-<h2>8. Contact Us</h2>
+<h2>9. Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, please contact us at:</p>
 <p>
   <strong>Lance Abson</strong><br/>
