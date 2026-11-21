@@ -26,7 +26,7 @@ hr { border: none; border-top: 1px solid #eee; margin: 2em 0; }
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 20 November 2026</p>
+<p class="updated">Last updated: 21 November 2026</p>
 
 <p>This Privacy Policy describes how <strong>Surname Story</strong> ("the App", "we", "us") collects, uses, and shares
 information when you use our mobile application on iOS and Android.</p>
@@ -34,17 +34,18 @@ information when you use our mobile application on iOS and Android.</p>
 <h2>1. Information We Collect</h2>
 <p>We do not ask for your name, email address, or any other personal detail, and the App has no account to sign up for.
 Most of what the App remembers is kept on your own device. The exceptions are the surname you search for, a random
-install identifier, and the advertising described below.</p>
+install identifier, and a record of which surnames a purchase has unlocked, all described below. The App has no
+advertising and does not track you.</p>
 
 <h3>The surname you search for</h3>
 <p>When you search, the surname you type is sent to our service, which is hosted on Google Firebase (Google Cloud) in London.
 Our service asks OpenAI to write the report for that surname, and sends OpenAI only the surname itself, not your device
 identifiers or anything else about you. The finished report is stored on our service under the surname, so that the next
 person who searches for the same surname is served the same report. A stored report is not linked to you or to your device.
-The surname you type is not used for advertising.</p>
+The surname you type is never used for advertising.</p>
 
 <h3>A random install identifier</h3>
-<p>The first time you search, the App makes a random identifier on your device and sends it with each search. It is not your
+<p>The first time you search, the App makes a random identifier on your device and sends it with each search. It is not an
 advertising identifier and is not linked to your name, email address or any account. We use it only to count how many new
 reports one installation asks for, so that no single device can run up our costs. These counters expire on their own. If an
 installation sends no identifier, we count by the IP address of the request instead, in the same way. A fresh identifier is
@@ -73,26 +74,15 @@ data on our behalf as our hosting provider, and may log technical information su
 requests.</p>
 <p><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></p>
 
-<h3>Advertising &ndash; Unity LevelPlay, with ironSource Ads, Unity Ads and Google AdMob</h3>
-<p>The free report screen shows a banner advertisement. If you unlock the full report, the App shows no ads. Unity LevelPlay
-manages the ads: for each one it holds an auction between ad networks such as ironSource Ads, Unity Ads and Google AdMob, and
-the winning network shows the ad. Google's User Messaging Platform (UMP) manages your consent choices. LevelPlay and these ad
-networks may process device identifiers (IDFA on iOS, GAID on Android), IP addresses, device information, and ad
-interactions to deliver and measure ads. The App shows no full-screen or video ads.</p>
-<p>In the UK, the EEA, and other regions where it is required, we show Google's consent form before any ad is requested, and
-you can reopen it at any time from the "Privacy and ad choices" link on the first screen of the App to change your choice. If
-you decline, ads can still appear, but they are not personalised and your data is not sold or shared for advertising. In US
-states with privacy laws, you can opt out of the sale or sharing of your data in the same place.</p>
-<p><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank">Unity Game Player and App User Privacy Policy</a><br />
-<a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a><br />
-<a href="https://support.google.com/admob/answer/6128543" target="_blank">How Google uses data from AdMob</a></p>
-
 <h3>Purchases (optional)</h3>
-<p>The App offers one optional purchase, which unlocks the full report. The purchase is handled entirely by Apple or Google; we
-receive no payment details and no information about who bought it. To unlock your report, the App sends the store's proof of
-purchase (an Apple signed transaction or a Google Play purchase token) to our service, which checks it with Apple's signature
-or with Google Play and then answers yes or no. We do not keep the proof. The App asks the store whether you own the purchase
-each time it starts, so you can restore it on a new device with the same store account.</p>
+<p>The App offers one optional purchase, which unlocks the full report for two surnames of your choice, and can be bought again
+for more. The purchase is handled entirely by Apple or Google; we receive no payment details and no information about who bought
+it. To unlock a report, the App sends the store's proof of purchase (an Apple signed transaction or a Google Play purchase token)
+to our service, which checks it with Apple's signature or with Google Play. So that one purchase unlocks no more than two
+surnames, our service keeps the store's transaction number (for Google Play, a one-way scrambled form of the purchase token) and
+the surnames it has unlocked. This record does not contain your name, email address, store account or device identifiers. The
+App also keeps your proofs of purchase on your device so it can show your unlocked reports again, and you can restore them on a
+new device with the same store account.</p>
 
 <h3>Fonts and maps</h3>
 <p>The App's typefaces and the world map are built into the App, so nothing is requested from a font or map service when you
@@ -104,11 +94,10 @@ information in accordance with their own privacy policies. We do not receive or 
 <p><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a><br />
 <a href="https://policies.google.com/privacy" target="_blank">Google Play Privacy Policy</a></p>
 
-<h2>3. iOS App Tracking Transparency</h2>
-<p>On iOS 14.5 and later, we ask for your permission before your device's advertising identifier (IDFA) is used for personalised
-advertising, and only after you have answered the consent form where one applies. You may deny this request and the App will
-continue to function normally; ads will simply be less personalised. You can change your answer at any time in
-Settings &rsaquo; Privacy &amp; Security &rsaquo; Tracking.</p>
+<h2>3. No Advertising or Tracking</h2>
+<p>The App shows no advertisements, contains no advertising or analytics software, and does not use your device's
+advertising identifier (IDFA on iOS, GAID on Android). It does not track you across other companies' apps or websites, and we
+do not sell or share your data.</p>
 
 <h2>4. Children's Privacy</h2>
 <p>The App is intended for people aged 13 and over and is not directed at children. We do not knowingly collect personal
@@ -118,13 +107,14 @@ we will delete it.</p>
 <h2>5. Data Retention and Deletion</h2>
 <p>Data held on your device is deleted when you uninstall the App. A stored report is kept on our service without any link to
 you; because we cannot tell which reports were asked for by whom, there is nothing to delete about you there. Usage counters
-described above expire on their own within a day. Data collected by the third-party services above is retained according to
+described above expire on their own within a day. The purchase record described above is kept for as long as the App is
+offered, so that your unlocked surnames can be restored. Data collected by the third-party services above is retained according to
 their own policies, linked above.</p>
 
 <h2>6. Your Rights</h2>
 <p>Depending on where you live you may have rights over your personal data, including access, correction, and deletion. We hold
 very little that can be tied to you; contact us using the details below and we will act on anything we can find. For data held
-by advertising services, please use their privacy links above.</p>
+by Apple, Google or OpenAI, please use their privacy links above.</p>
 
 <h2>7. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated date. Continued use
