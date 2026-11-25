@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>A gift from Surname Story</title>
+<style>
+  :root { --bg:#FBF7F0; --ink:#2A1B0E; --soft:#6B5A48; --gold:#E0B25B; --card:#fff; --rule:#E7DCCB; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#17120D; --ink:#F4ECDF; --soft:#B8A78F; --card:#241C14; --rule:#3A2E22; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 Georgia, 'Times New Roman', serif; display: grid; place-items: center; min-height: 100vh; padding: 24px 16px; }
+  main { width: 100%; max-width: 420px; text-align: center; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 8px 0 8px; }
+  p { color: var(--soft); margin: 8px 0; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: 22px 18px; margin-top: 18px; }
+  .code { font: 700 30px/1 ui-monospace, Menlo, monospace; letter-spacing: .12em; margin: 12px 0 4px; user-select: all; }
+  a.btn { display: block; margin-top: 12px; padding: 16px; border-radius: 14px; font: 700 18px/1.2 system-ui, sans-serif; text-decoration: none; }
+  a.primary { background: linear-gradient(180deg, #F2CF86, #E0B25B 50%, #C99A43); color: #2A1B0E; }
+  a.secondary { border: 1px solid var(--rule); color: var(--ink); }
+  small { display: block; margin-top: 14px; color: var(--soft); font: 14px/1.4 system-ui, sans-serif; }
+</style>
+</head>
+<body>
+<main>
+  <p style="font-size:44px;margin:0" aria-hidden="true">🎁</p>
+  <h1>Someone has given you a surname story</h1>
+  <p>The full story of a surname, in Surname Story. It is yours to keep, with nothing to pay.</p>
+  <div class="card">
+    <a id="open" class="btn primary" href="surnamestory://gift/">Open my gift</a>
+    <p>Don't have the app yet? Install it first, then come back to this page and tap the button.</p>
+    <a id="ios" class="btn secondary" href="https://apps.apple.com/app/id6837458422">Get it on the App Store</a>
+    <a id="android" class="btn secondary" href="https://play.google.com/store/apps/details?id=com.iphonegamesapps.surnamestory">Get it on Google Play</a>
+  </div>
+  <div class="card" id="codebox" hidden>
+    <p>Or open the app, tap <b>I have a gift</b> and type:</p>
+    <div class="code" id="code"></div>
+  </div>
+  <small>The gift code stays in the part of the link after the #, so it is not sent to this website.</small>
+</main>
+<script>
+  // The code rides in the fragment (#ABCD2345), so it never reaches the server hosting this page.
+  var code = (location.hash || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+  if (/^[A-Z0-9]{8}$/.test(code)) {
+    document.getElementById('open').href = 'surnamestory://gift/' + code;
+    document.getElementById('code').textContent = code.slice(0, 4) + ' ' + code.slice(4);
+    document.getElementById('codebox').hidden = false;
+    // On a phone that has the app, try to open it straight away; harmless if it is not installed.
+    if (/iPhone|iPad|Android/i.test(navigator.userAgent)) setTimeout(function () { location.href = 'surnamestory://gift/' + code; }, 400);
+  } else {
+    document.getElementById('open').hidden = true;
+  }
+  var android = /Android/i.test(navigator.userAgent), ios = /iPhone|iPad/i.test(navigator.userAgent);
+  if (android) document.getElementById('ios').hidden = true;
+  if (ios) document.getElementById('android').hidden = true;
+</script>
+</body>
+</html>
